@@ -1,0 +1,22 @@
+<h2>Add Components</h2>
+<?php //echo "<h1>".$this->locale->_('Hello World')."</h1>"; ?>
+
+<?php  echo $message ?>
+
+
+<?php echo $this->tag->form("acl/component"); ?>
+
+    <p>
+        <label for="controller">Controller</label>
+        <?php echo $this->tag->textField("controller"); ?>
+    </p>
+    <p>
+        <label for="action">Action</label>
+        <?php echo $this->tag->textField("action"); ?>
+    </p>
+    <p>
+        <?php echo $this->tag->submitButton("Add component"); ?>
+    </p>
+
+</form>
+<?php echo $this->tag->linkTo(['/', 'Go back', 'class' => 'btn btn-primary']); ?>

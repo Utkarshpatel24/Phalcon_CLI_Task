@@ -1,0 +1,39 @@
+<?php
+
+echo "<h1>Order List!</h1>";
+
+echo $this->tag->linkTo(["/", "Go Back!", 'class' => 'btn btn-primary']);
+
+if ($order->count() > 0) {
+    ?>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th>order_id</th>
+            <th>Customer Name</th>
+            <th>Address</th>
+            <th>Product</th>
+            <th>Zipcode</th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="3">orders quantity: <?php echo $order->count(); ?></td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <?php foreach ($order as $o) { ?>
+            <tr>
+                <td><?php echo $o->order_id; ?></td>
+                <td><?php echo $o->name; ?></td>
+                <td><?php echo $o->address; ?></td>
+                <td><?php echo $o->product; ?></td>
+                <td><?php echo $o->zipcode; ?></td>
+                <td><?php echo $o->quantity; ?></td>
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+    <?php
+}

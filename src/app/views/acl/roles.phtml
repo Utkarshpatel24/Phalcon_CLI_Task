@@ -1,0 +1,18 @@
+<h2>Add Roles</h2>
+
+
+<?php  echo $message ?>
+
+<?php echo $this->tag->form("acl/roles"); ?>
+
+    <p>
+        <label for="role">Role</label>
+        <?php echo $this->tag->textField("role"); ?>
+    </p>
+
+    <p>
+        <?php echo $this->tag->submitButton("Add Role"); ?>
+    </p>
+
+</form>
+<?php echo $this->tag->linkTo(['/', 'Go back', 'class' => 'btn btn-primary']); ?>

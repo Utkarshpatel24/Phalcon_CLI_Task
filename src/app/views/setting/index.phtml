@@ -1,0 +1,25 @@
+
+<h2>Settings</h2>
+<?php echo $this->tag->form("setting/register"); ?>
+    <p>
+        <label for="title">Title optimization</label>
+
+        <?php echo $this->tag->select(['title', ['with tags', 'without tags']]); ?>
+    </p>
+    <p>
+        <label for="price">Default Price</label>
+        <?php echo $this->tag->textField("price");?>
+    </p>
+    <p>
+        <label for="stock">Default Stock</label>
+        <?php echo $this->tag->textField("stock");?>
+    </p>
+    <p>
+        <label for="zipcode">Default Zipcode</label>
+        <?php echo $this->tag->textField("zipcode");?>
+    </p>
+    <p>
+        <?php echo $this->tag->submitButton("submit"); ?>
+    </p>
+
+</form>
